@@ -10,9 +10,9 @@ To install everynode, run the following command:
 ## Usage
 To use everynode, require the package and start the node detection process like this:
 
-```const everynode = require("everynode");
+```const everynode = require("everynode");```
 
-everynode.nodeDetection();```
+```everynode.nodeDetection();```
 
 ## Configuration
 The following configuration options are available:
