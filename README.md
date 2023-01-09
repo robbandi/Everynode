@@ -21,14 +21,16 @@ The following configuration options are available:
 ```logPath (default: "./node_track.log")```: The path to the log file.
 To change any of these options, pass an object with the desired values to the nodeDetection function like this:
 
-```const everynode = require("everynode");```
+```
+const everynode = require("everynode");```
 
-```everynode.nodeDetection({
+everynode.nodeDetection({
   interval: 10000,
   checkCommand: "ps aux | grep '[n]ode'",
   restartCommand: "npm start",
   logPath: "./node_watchdog.log",
-});```
+});
+```
 
 Logging
 Everynode logs its activity to the console and to the log file specified in the logPath configuration option. If an error occurs, it will be logged as well.
