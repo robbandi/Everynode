@@ -22,7 +22,7 @@ The following configuration options are available:
 To change any of these options, pass an object with the desired values to the nodeDetection function like this:
 
 ```
-const everynode = require("everynode");```
+const everynode = require("everynode");
 
 everynode.nodeDetection({
   interval: 10000,
