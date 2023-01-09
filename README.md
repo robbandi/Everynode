@@ -1,6 +1,4 @@
-# node_detect
-
-## Everynode
+# Everynode
 A simple node detection watchdog for ensuring that a node process is always running.
 
 ## Installation
