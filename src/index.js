@@ -1,5 +1,5 @@
-import { appendFile } from "fs";
-import { exec } from "child_process";
+const fs = require("fs");
+const { exec } = require("child_process");
 
 // Set the interval for checking the node process (in milliseconds)
 const interval = 5000;
@@ -16,7 +16,7 @@ const logPath = "./node_track.log";
 // Start the node detection
 nodeDetection();
 
-function nodeDetection() {
+ function nodeDetection() {
   checkNodeProcess((err, running) => {
     if (err) {
       logError(err);
@@ -56,7 +56,7 @@ function restartNodeProcess(callback) {
 
 function log(message) {
   console.log(message);
-  appendFile(logPath, `${new Date().toISOString()}: ${message}\n`, (err) => {
+  fs.appendFile(logPath, `${new Date().toISOString()}: ${message}\n`, (err) => {
     if (err) {
       console.error(err);
     }
@@ -65,7 +65,7 @@ function log(message) {
 
 function logError(error) {
   console.error(error);
-  appendFile(
+  fs.appendFile(
     logPath,
     `${new Date().toISOString()}: ${error.toString()}\n`,
     (err) => {
@@ -75,3 +75,7 @@ function logError(error) {
     }
   );
 }
+
+module.exports = {
+  nodeDetection,
+};
