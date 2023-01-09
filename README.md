@@ -6,7 +6,7 @@ A simple node detection watchdog for ensuring that a node process is always runn
 Installation
 To install everynode, run the following command:
 
-Copy code
+### Copy code
 npm install everynode
 Usage
 To use everynode, require the package and start the node detection process like this:
